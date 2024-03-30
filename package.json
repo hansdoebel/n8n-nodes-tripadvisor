@@ -1,23 +1,27 @@
 {
-	"name": "n8n-nodes-<...>",
+	"name": "n8n-nodes-tripadvisor",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Tripadvisor custom node for n8n",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"tripadvisor",
+		"n8n",
+		"node"
 	],
 	"license": "MIT",
-	"homepage": "",
+	"homepage": "https://github.com/hansdoebel/n8n-nodes-tripadvisor.git",
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "Hans Doebel",
+		"email": "dev@hansdoebel.de"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
+		"url": "git+https://github.com/hansdoebel/n8n-nodes-tripadvisor.git"
 	},
 	"main": "index.js",
 	"scripts": {
 		"build": "tsc && gulp build:icons",
+		"exec": "clear && tsc && gulp build:icons && n8n start",
 		"dev": "tsc --watch",
 		"format": "prettier nodes credentials --write",
 		"lint": "eslint nodes credentials package.json",
@@ -30,10 +34,10 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/CredentialName.credentials.js"
+			"dist/credentials/TripadvisorApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/NodeName/NodeName.node.js"
+			"dist/nodes/Tripadvisor/Tripadvisor.node.js"
 		]
 	},
 	"devDependencies": {

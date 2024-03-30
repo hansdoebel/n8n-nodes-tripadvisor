@@ -1,47 +1,69 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# n8n-nodes-tripadvisor
 
-# n8n-nodes-starter
+[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](n8n.io). It includes the node linter and other dependencies.
+This is an n8n community node. It lets you use Tripadvisor in your n8n workflows.
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+TripAdvisor is a U.S.-based online travel company that operates a website and mobile app with user-generated content and a comparison shopping website. It also offers online hotel reservations and bookings for transportation, lodging, travel experiences, and restaurants. Its platform features reviews and opinions about accommodations, restaurants, experiences, airlines and cruises.
 
-## Prerequisites
+[Installation](#installation)  
+[Credentials](#credentials)  
+[Compatibility](#compatibility)  
+[Resources](#resources)  
+[Version history](#version-history)
 
-You need the following installed on your development machine:
+## Installation
 
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 16. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-	```
-	npm install n8n -g
-	```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
 
+1. Go to **Settings** > **Community Nodes.**
+2. Select **Install.**
+3. Find the node you want to install:
 
-## Using this starter
+   a.) Select **Browse**. n8n takes you to an npm search results page, showing all npm packages tagged with the keyword `n8n-community-node-package`.
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+   b.) Browse the list of results. You can filter the results or add more keywords.
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-    ```
-    git clone https://github.com/<your organization>/<your-repo-name>.git
-    ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+   c.) Once you find the package you want, make a note of the package name. If you want to install a specific version, make a note of the version number as well.
 
-## More information
+   d.) Return to n8n.
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+4. Enter the npm package name, and version number if required.
+5. Agree to the risks of using community nodes: select I understand the risks of installing unverified code from a public source.
+6. Select Install. n8n installs the node, and returns to the Community Nodes list in Settings.
 
-## License
+## Credentials
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+The Content API uses API Keys to authenticate requests. All API requests must be made over https.
+
+Follow these steps to obtain an API key:
+
+1. Go to [www.tripadvisor.com/developers](www.tripadvisor.com/developers)
+2. Sign up for a Tripadvisor account
+3. Click [Create API key](https://www.tripadvisor.com/developers?screen=credentials)
+
+### API Key Security
+
+Please safeguard your access key. To include it with each request, set it as the value of the "key" query parameter. If you need to make API calls from client code, be aware this may expose your key to other scripts and browser extensions on the client.
+
+Tripadvisor reserves the right to revoke an access key at any time and issue a new one if a key has leaked or is being misused.
+
+## Compatibility
+
+Tested successfully with:
+
+- n8n Version: 1.32.2
+- Node Version: 18.19.1
+- npm Version: 10.5.0
+- No extra packages required
+
+## Resources
+
+- [n8n Website](https://n8n.io/)
+- [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
+- [Tripadvisor Website](https://www.tripadvisor.com/)
+- [Tripadvisor API documentation](https://tripadvisor-content-api.readme.io/reference/overview)
+
+## Version history
+
+- `1.0.0` Initial release

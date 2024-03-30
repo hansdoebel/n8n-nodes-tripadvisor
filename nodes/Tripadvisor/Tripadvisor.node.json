@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.Tripadvisor",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Miscellaneous"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://tripadvisor-content-api.readme.io/reference/authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://tripadvisor-content-api.readme.io/reference/overview"
+			}
+		]
+	}
+}
